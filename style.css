@@ -42,16 +42,20 @@ h1 {
 }
 
 table {
+  background-color:#fff3f2;
+  color:pink;
   border-collapse: collapse;
   width: 100%;
+  border-radius:20px
 }
 
 td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+  border: none;
+  text-align: center;
+  padding: 18px;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #ffffff;
+   
 }
