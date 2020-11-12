@@ -9,5 +9,4 @@ function at() {
   document.getElementById("Lemon").innerHTML = `${LemonCount++}`;
   document.getElementById("Egg").innerHTML = `${EggCount++}`;
   document.getElementById("Bell pepper").innerHTML = `${BellPepperCount++}`;
-  
 }
