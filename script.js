@@ -28,6 +28,8 @@ function dragElement(elmnt) {
   }
 
   function dragMouseDown(e) {
+    console.log(elmnt)
+    addRecipe(elmnt)
     e = e || window.event;
     e.preventDefault();
     // get the mouse cursor position at startup:
@@ -61,9 +63,9 @@ function dragElement(elmnt) {
 
 
 
-  function addRecipe() {
+  function addRecipe(elmnt) {
   var btn = document.createElement("BUTTON");
-  btn.innerHTML = "CLICK ME";
-  btn.className = "aClassName";
+  btn.innerHTML = `${elmnt.innerHTML}`;
+  btn.className = "button";
   document.getElementById("recipe").appendChild(btn);
 }
