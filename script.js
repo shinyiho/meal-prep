@@ -3,6 +3,7 @@ let AvocadoCount = 0
 let LemonCount = 0
 let EggCount = 0
 let BellPepperCount = 0
+let AvocadoToastCount = 0
 
 function at() {
   document.getElementById("Avocado").innerHTML = `${AvocadoCount++}`;
@@ -29,7 +30,7 @@ function dragElement(elmnt) {
 
   function dragMouseDown(e) {
     console.log(elmnt)
-    addRecipe(elmnt)
+    // addRecipe(elmnt)
     e = e || window.event;
     e.preventDefault();
     // get the mouse cursor position at startup:
@@ -66,6 +67,8 @@ function dragElement(elmnt) {
   function addRecipe(elmnt) {
   var btn = document.createElement("BUTTON");
   btn.innerHTML = `${elmnt.innerHTML}`;
-  btn.className = "button";
+  btn.id = `AvocadoToast${++AvocadoToastCount}`;
+  btn.className = "button"
   document.getElementById("recipe").appendChild(btn);
+  dragElement(document.getElementById(btn.id ));
 }
