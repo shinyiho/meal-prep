@@ -38,5 +38,5 @@ h1 {
 
 .recipe {
   display: flex;
-  
+  justify-content:space-around;
 }
