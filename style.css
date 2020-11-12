@@ -20,7 +20,10 @@ h1 {
     -1px  1px 0 #000,
      1px  1px 0 #000;
 }
-
+.layout{
+  padding:20px;
+  display:flex
+}
 .button {
   background-color: pink;
   border-radius: 25px;
@@ -40,10 +43,13 @@ h1 {
   display: flex;
   justify-content:space-around;
 }
-
+.Ingredient{
+  flex:50%;
+}
 table {
+  flex:50%;
   background-color:#fff3f2;
-  color:pink;
+  color:#e35246;
   border-collapse: collapse;
   width: 100%;
   border-radius:20px
@@ -53,6 +59,9 @@ td, th {
   border: none;
   text-align: center;
   padding: 18px;
+}
+td{
+  padding:30px
 }
 
 tr:nth-child(even) {
