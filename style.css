@@ -23,7 +23,6 @@ h1 {
 
 
 .button {
-  
   background-color: pink;
   border-radius: 25px;
   border: none;
@@ -37,3 +36,13 @@ h1 {
 }
 .button:hover {
   transform: scale(1.5);
+}
+
+
+
+.recipe {
+  width:100vw
+  display:flex
+  aligh-content:space-around
+  padding:20px
+}
