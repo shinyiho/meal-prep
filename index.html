@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Hello!</title>
+    <title>One week meal prep!</title>
     
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css">
@@ -16,37 +16,49 @@
   <body>
     <h1> One week meal prep!</h1>
     <div class = "recipe">
-      <button onclick="at()" class = "button" type="button">Avocado Toast</button>
-      <button class = "button" type="button">Spaghetti</button>
-      <button class = "button" type="button">Chilli</button>    
-      <button class = "button" type="button">+</button>    
+        <button onclick="at()" class = "button" type="button">Avocado Toast</button>
+        <button class = "button" type="button">Spaghetti</button>
+        <button class = "button" type="button">Chilli</button>    
+        <button class = "button" type="button">+</button>    
     </div>
-    <p>
-    <img src="https://img.icons8.com/fluent/24/000000/avocado.png"/>
-    <h id="Avocado">0</h>
-    </p>
-    <p>
-    <img src="https://img.icons8.com/cotton/24/000000/citrus-1.png"/>
-    <h id="Lemon">0</h>
-    </p>
-    <p>
-     <img src="https://img.icons8.com/carbon-copy/24/000000/eggs.png"/>
-    <h id="Egg">0</h>
-    </p>
-    <p>
-    <img src="https://img.icons8.com/doodle/24/000000/paprika--v1.png"/>
-    <h id="Bell pepper">0</h>
-    </p>
-    <p>
-    <img src="https://img.icons8.com/cotton/24/000000/steak-medium--v1.png"/>
-    <h id="Beef">0</h>
-    </p>
-    <p>
-    <img src="https://img.icons8.com/fluent/24/000000/heinz-beans.png"/>
-    <h id="KidneyBeans">0</h>
-    </p>
-    
-
+    <div class ="Ingredient">
+        <p>
+        <img src="https://img.icons8.com/fluent/24/000000/avocado.png"/>
+        <h id="Avocado">0</h>
+        </p>
+        <p>
+        <img src="https://img.icons8.com/cotton/24/000000/citrus-1.png"/>
+        <h id="Lemon">0</h>
+        </p>
+        <p>
+         <img src="https://img.icons8.com/carbon-copy/24/000000/eggs.png"/>
+        <h id="Egg">0</h>
+        </p>
+        <p>
+        <img src="https://img.icons8.com/doodle/24/000000/paprika--v1.png"/>
+        <h id="Bell pepper">0</h>
+        </p>
+        <p>
+        <img src="https://img.icons8.com/cotton/24/000000/steak-medium--v1.png"/>
+        <h id="Beef">0</h>
+        </p>
+        <p>
+        <img src="https://img.icons8.com/fluent/24/000000/heinz-beans.png"/>
+        <h id="BakedBeans">0</h>
+        </p>
+        <p>
+        <img alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMjYiIGhlaWdodD0iMjYiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGc+PHBhdGggZD0iTTExNC4zNjU2NywyMS41Yy0zMy4wNzA1OCwwIC0zNy42NTAwOCwzMC42ODQwOCAtNDkuODI2MjUsNDMuMzE4OTJjLTEyLjA0MzU4LDEyLjQ2MjgzIC00My4wMzk0MiwyMS42MDM5MiAtNDMuMDM5NDIsNTAuMzAyODNjMCw2LjY0MzUgMy4wMTcxNywxMy42OTE5MiAxMC42OTk4MywyMS4wODA3NWM0LjA1Mjc1LDMuOTU2IDkuNjk2NSw1Ljc3OTkyIDE2LjMwNDE3LDUuNzc5OTJjMTYuOTk5MzMsMCA0MC41NDksLTEyLjIyNjMzIDYwLjc4NDA4LC0zMy4xNjAxN2MyOC4wODk3NSwtMjkuMTE4MTcgMzkuMTEyMDgsLTY0LjAzNzc1IDI0LjY3MTI1LC03OC4wMjM1Yy02Ljg3MjgzLC02LjYzNjMzIC0xMy40MDg4MywtOS4yOTg3NSAtMTkuNTkzNjcsLTkuMjk4NzV6IiBmaWxsPSIjZTc0YzNjIj48L3BhdGg+PHBhdGggZD0iTTEzNC44MjY1LDMxLjgyNzE3YzEzLjAwMDMzLDE0LjU4MDU4IDEuOTIwNjcsNDguNTMyNjcgLTI1LjUzODQyLDc2Ljk5NTA4Yy0yMC4yMzE1LDIwLjkzMzgzIC00My43ODQ3NSwzMy4xNjAxNyAtNjAuNzg0MDgsMzMuMTYwMTdjLTQuODg0MDgsMCAtOS4yMzA2NywtMS4wMTA1IC0xMi44MTA0MiwtMy4xMzE4M2MyNC45MzY0MiwyMC4xODEzMyA2MS41MDQzMywxMy4yOTA1OCA4OC44MzgsLTE1LjAyODVjMjcuODc4MzMsLTI4Ljg5NiAzNi4zMDI3NSwtNjUuNjAwMDggMTAuMjk0OTIsLTkxLjk5NDkyeiIgZmlsbD0iIzZkNGM0MSI+PC9wYXRoPjxwYXRoIGQ9Ik05MC41NzU5Miw2My40NDI5MmMtMi4xNjc5Miw2LjAzMDc1IC00LjA0OTE3LDEzLjE0NzI1IC05LjQ3NDMzLDE4Ljc4MzgzYy01LjIxNzMzLDUuNDMyMzMgLTE0LjI1ODA4LDkuMzQ4OTIgLTE5LjgxOTQyLDEyLjExMTY3Yy0xNC4zMjk3NSw3LjA4NzgzIC0xOS42MzY2NywyMi4yODExNyAtMTguNTk3NSwzMi40ODY1YzMuMTM5LC0xMS41NDU1IDE0LjQzMzY3LC0xOC40NzkyNSAyMy44MTQ4MywtMjMuMDU1MTdjNi4xODEyNSwtMy4wMjQzMyAxNi42MjY2NywtNi40NDI4MyAyMy4yOTg4MywtMTMuMzU4NjdjNy4xMjcyNSwtNy4zNDU4MyA4LjI4ODI1LC0xNS45OTk1OCAxMC43Mjg1LC0yMi41MzJjMy4zNTc1OCwtOC44NDM2NyAxMy45MDY5MiwtMjEuOTgzNzUgMjMuODUwNjcsLTI3Ljc1NjVjLTguOTA0NTgsLTAuMjU0NDIgLTI3LjA2MTMzLDQuNzk4MDggLTMzLjgwMTU4LDIzLjMyMDMzeiIgZmlsbD0iIzZkNGM0MSI+PC9wYXRoPjwvZz48L2c+PC9zdmc+"/>
+        <h id="KidneyBeans">0</h>
+        </p>
+    </div>
+    <table>
+        <tr>
+          <th>DAY</th>
+          <th>BREAKFAST</th>
+          <th>LUNCH</th>
+          <th>DINNER</th>
+        </tr>
+    </table>
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
