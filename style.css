@@ -42,7 +42,17 @@ h1 {
 .recipe {
   display: flex;
   justify-content:space-around;
+
 }
+
+#AvocadoToast{
+    position: absolute;
+  
+}
+
+  
+
+
 .Ingredient{
   flex:50%;
 }
