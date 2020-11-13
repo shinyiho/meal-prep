@@ -30,7 +30,7 @@ function dragElement(elmnt) {
 
   function dragMouseDown(e) {
     console.log(elmnt)
-    // addRecipe(elmnt)
+    addRecipe(elmnt)
     e = e || window.event;
     e.preventDefault();
     // get the mouse cursor position at startup:
