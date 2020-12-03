@@ -76,8 +76,9 @@ function dragElement(elmnt) {
   function addRecipe(elmnt) {
   var btn = document.createElement("BUTTON");
   btn.innerHTML = `${elmnt.innerHTML}`;
-  btn.id = `AvocadoToast${++AvocadoToastCount}`;
+  btn.id = `${elmnt.id.slice(0,btn.id.length-1)}${elmnt.id.slice(-1)}`;
   btn.className = "button AvocadoToast"
   document.getElementById("recipe").appendChild(btn);
   dragElement(document.getElementById(`${btn.id}`));
+    console.log(elmnt)
 }
