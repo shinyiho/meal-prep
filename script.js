@@ -1,9 +1,7 @@
 let sumMeal = {
-  AvocadoCount: 0,
-  LemonCount: 0,
-  EggCount: 0,
-  BellPepperCount: 0,
-  AvocadoToastCount: 0
+  AvocadoToast: 0,
+  Spaghetti: 0,
+  Chillie: 0
 };
 
 // function at() {
@@ -34,6 +32,7 @@ function dragElement(elmnt) {
   }
 
   function dragMouseDown(e) {
+    console.log("getmousedown")
     console.log(e);
     e = e || window.event;
     e.preventDefault();
@@ -46,6 +45,7 @@ function dragElement(elmnt) {
   }
 
   function elementDrag(e) {
+        console.log("getdraging")
     e = e || window.event;
     e.preventDefault();
     // calculate the new cursor position:
@@ -61,9 +61,10 @@ function dragElement(elmnt) {
   }
 
   function closeDragElement() {
-    // console.log(elmnt.id)
+    
+    console.log(sumMeal[elmnt.className])
     // stop moving when mouse button is released:
-    if (elmnt.id === `${elmnt.class}${AvocadoToastCount}`) {
+    if (elmnt.id === `${elmnt.className}${sumMeal[elmnt.className]}`) {
       addRecipe(elmnt);
     }
     // console.log(`AvocadoToast${AvocadoToastCount}`)
@@ -74,19 +75,20 @@ function dragElement(elmnt) {
 }
 
 function addRecipe(elmnt) {
-  if (AvocadoToastCount !== 6) {
     console.log(elmnt);
+  if (sumMeal[elmnt.className] !== 6) {
     var btn = document.createElement("BUTTON");
     btn.innerHTML = `${elmnt.innerHTML}`;
-    btn.id = `${elmnt.id.slice(0, btn.id.length - 1)}${++AvocadoToastCount}`;
-    btn.className = "button AvocadoToast";
+    btn.id = `${elmnt.className}${++sumMeal[elmnt.className]}`;
+    btn.className = "AvocadoToast";
     document.getElementById("recipe").appendChild(btn);
     dragElement(document.getElementById(`${btn.id}`));
-    console.log(btn.id);
-    console.log(AvocadoToastCount);
+    // console.log(btn.id);
+    // console.log(AvocadoToastCount);
   } else {
     alert(
       `Note:To maintain a balanced diet, having AvocadoToast more than 7 meals per week is not recommended.`
     );
   }
+   console.log(sumMeal[elmnt.className]);
 }
