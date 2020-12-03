@@ -34,6 +34,7 @@ button {
   text-decoration: none;
   font-size: 16px;
   transition: transform .2s; /* Animation */
+  position: absolute;
 }
 button:hover {
   transform: scale(1.5);
@@ -46,11 +47,15 @@ button:hover {
 }
 
 .AvocadoToast{
-    position: absolute;
-    
+    left:10vw;
+}
+.Chilli{
+      left:30vw;
   
 }
-
+.Spaghetti{
+     left:50vw;
+}
   
 
 

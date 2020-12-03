@@ -1,7 +1,7 @@
 let sumMeal = {
   AvocadoToast: 0,
   Spaghetti: 0,
-  Chillie: 0
+  Chilli: 0
 };
 
 // function at() {
@@ -80,10 +80,10 @@ function addRecipe(elmnt) {
     var btn = document.createElement("BUTTON");
     btn.innerHTML = `${elmnt.innerHTML}`;
     btn.id = `${elmnt.className}${++sumMeal[elmnt.className]}`;
-    btn.className = "AvocadoToast";
+    btn.className = `${elmnt.className}`;
     document.getElementById("recipe").appendChild(btn);
     dragElement(document.getElementById(`${btn.id}`));
-    // console.log(btn.id);
+    console.log(btn);
     // console.log(AvocadoToastCount);
   } else {
     alert(
