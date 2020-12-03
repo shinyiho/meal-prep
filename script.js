@@ -14,9 +14,9 @@ function at() {
 
 
 
-
+document.querySlectorAll(".AvocadoToast").forEach(AvocadoToast=>{dragElement(AvocadoToast);})
 // Make the DIV element draggable:
-dragElement(document.getElementById("AvocadoToast"));
+
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
