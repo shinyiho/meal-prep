@@ -1,17 +1,22 @@
-let AvocadoCount = 0;
-let LemonCount = 0;
-let EggCount = 0;
-let BellPepperCount = 0;
-let AvocadoToastCount = 0;
+let sumMeal = {
+  AvocadoCount: 0,
+  LemonCount: 0,
+  EggCount: 0,
+  BellPepperCount: 0,
+  AvocadoToastCount: 0
+};
 
-function at() {
-  document.getElementById("Avocado").innerHTML = `${AvocadoCount++}`;
-  document.getElementById("Lemon").innerHTML = `${LemonCount++}`;
-  document.getElementById("Egg").innerHTML = `${EggCount++}`;
-  document.getElementById("Bell pepper").innerHTML = `${BellPepperCount++}`;
-}
+// function at() {
+//   document.getElementById("Avocado").innerHTML = `${AvocadoCount++}`;
+//   document.getElementById("Lemon").innerHTML = `${LemonCount++}`;
+//   document.getElementById("Egg").innerHTML = `${EggCount++}`;
+//   document.getElementById("Bell pepper").innerHTML = `${BellPepperCount++}`;
+// }
 
-dragElement(document.getElementById("AvocadoToast0"));
+document.querySelectorAll("button").forEach(button => {
+  dragElement(document.getElementById(`${button.id}`));
+  console.log(button.id);
+});
 
 function dragElement(elmnt) {
   var pos1 = 0,
@@ -58,7 +63,7 @@ function dragElement(elmnt) {
   function closeDragElement() {
     // console.log(elmnt.id)
     // stop moving when mouse button is released:
-    if (elmnt.id === `AvocadoToast${AvocadoToastCount}`) {
+    if (elmnt.id === `${elmnt.class}${AvocadoToastCount}`) {
       addRecipe(elmnt);
     }
     // console.log(`AvocadoToast${AvocadoToastCount}`)
@@ -80,6 +85,8 @@ function addRecipe(elmnt) {
     console.log(btn.id);
     console.log(AvocadoToastCount);
   } else {
-    alert(`Note:To maintain a balanced diet, having AvocadoToast more than 7 meals per week is not recommended.`);
+    alert(
+      `Note:To maintain a balanced diet, having AvocadoToast more than 7 meals per week is not recommended.`
+    );
   }
 }
