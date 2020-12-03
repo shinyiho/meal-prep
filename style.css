@@ -47,14 +47,14 @@ button:hover {
 }
 
 .AvocadoToast{
-    left:10vw;
+    left:30vw;
 }
 .Chilli{
-      left:30vw;
+      left:50vw;
   
 }
 .Spaghetti{
-     left:50vw;
+     left:70vw;
 }
   
 
@@ -68,11 +68,14 @@ table {
   color:#e35246;
   border-collapse: collapse;
   width: 100%;
-  border-radius:20px
+  border-radius:20px;
+  margin:20px;
+  
 }
 
+
 td, th {
-  border: none;
+/*   border: none; */
   text-align: center;
   padding: 18px;
 }
@@ -83,4 +86,9 @@ td{
 tr:nth-child(even) {
   background-color: #ffffff;
    
+}
+tr:last-child{
+  background-color: #ff0000;
+  margin-bottom:20px
+  border-radius:200px;
 }
