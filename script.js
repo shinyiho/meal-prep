@@ -13,11 +13,7 @@ function at() {
 }
 
 
-let AvocadoToasts = document.querySelectorAll("#AvocadoToastd")
-    // AvocadoToasts.forEach(AvocadoToast=>{
-  dragElement(AvocadoToasts)Avo
-// })
-// Make the DIV element draggable:
+  dragElement(document.getElementById("AvocadoToast0"))
 
 
 function dragElement(elmnt) {
@@ -62,8 +58,11 @@ function dragElement(elmnt) {
   }
 
   function closeDragElement() {
+    // console.log(elmnt.id)
     // stop moving when mouse button is released:
-     addRecipe(elmnt)
+    if(elmnt.id===`AvocadoToast${AvocadoToastCount}`){ addRecipe(elmnt)}
+    // console.log(`AvocadoToast${AvocadoToastCount}`)
+ 
     document.onmouseup = null;
     document.onmousemove = null;
     
@@ -81,5 +80,4 @@ function dragElement(elmnt) {
   btn.className = "button AvocadoToast"
   document.getElementById("recipe").appendChild(btn);
   dragElement(document.getElementById(`${btn.id}`));
-    console.log(document.getElementById(`${btn.id}`))
 }
