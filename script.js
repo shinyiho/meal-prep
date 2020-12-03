@@ -13,8 +13,10 @@ function at() {
 }
 
 
-let AvocadoToasts = document.getElementById("AvocadoToast")
-  dragElement(AvocadoToast)
+let AvocadoToasts = document.querySelectorAll("#AvocadoToastd")
+    // AvocadoToasts.forEach(AvocadoToast=>{
+  dragElement(AvocadoToasts)Avo
+// })
 // Make the DIV element draggable:
 
 
@@ -61,8 +63,7 @@ function dragElement(elmnt) {
 
   function closeDragElement() {
     // stop moving when mouse button is released:
-    if(elmnt.id===AvocadoToastCount){ addRecipe(elmnt)}
-    
+     addRecipe(elmnt)
     document.onmouseup = null;
     document.onmousemove = null;
     
