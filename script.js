@@ -16,22 +16,25 @@ function at() {
 let AvocadoToasts = document.querySelectorAll(".AvocadoToast")
     AvocadoToasts.forEach(AvocadoToast=>{
   dragElement(AvocadoToast)
-  console.log(AvocadoToasts)
 })
 // Make the DIV element draggable:
 
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  // console.log("sdhf")
   if (document.getElementById(elmnt.id + "header")) {
     // if present, the header is where you move the DIV from:
     document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
+    
     elmnt.onmousedown = dragMouseDown;
+    
   }
 
   function dragMouseDown(e) {
+    console.log(e)
     e = e || window.event;
     e.preventDefault();
     // get the mouse cursor position at startup:
@@ -50,9 +53,12 @@ function dragElement(elmnt) {
     pos2 = pos4 - e.clientY;
     pos3 = e.clientX;
     pos4 = e.clientY;
+    
     // set the element's new position:
     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    console.log(elmnt.style.top)
+    
   }
 
   function closeDragElement() {
@@ -60,6 +66,7 @@ function dragElement(elmnt) {
      addRecipe(elmnt)
     document.onmouseup = null;
     document.onmousemove = null;
+    
    
   }
 }
