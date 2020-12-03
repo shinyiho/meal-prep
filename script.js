@@ -13,8 +13,11 @@ function at() {
 }
 
 
-
-document.querySlectorAll(".AvocadoToast").forEach(AvocadoToast=>{dragElement(AvocadoToast);})
+let AvocadoToasts = document.querySelectorAll(".AvocadoToast")
+    AvocadoToasts.forEach(AvocadoToast=>{
+  dragElement(AvocadoToast)
+  console.log(AvocadoToasts)
+})
 // Make the DIV element draggable:
 
 
@@ -29,8 +32,6 @@ function dragElement(elmnt) {
   }
 
   function dragMouseDown(e) {
-    console.log(elmnt)
-    addRecipe(elmnt)
     e = e || window.event;
     e.preventDefault();
     // get the mouse cursor position at startup:
@@ -56,8 +57,10 @@ function dragElement(elmnt) {
 
   function closeDragElement() {
     // stop moving when mouse button is released:
+     addRecipe(elmnt)
     document.onmouseup = null;
     document.onmousemove = null;
+   
   }
 }
 
@@ -68,7 +71,8 @@ function dragElement(elmnt) {
   var btn = document.createElement("BUTTON");
   btn.innerHTML = `${elmnt.innerHTML}`;
   btn.id = `AvocadoToast${++AvocadoToastCount}`;
-  btn.className = "button"
+  btn.className = "button AvocadoToast"
   document.getElementById("recipe").appendChild(btn);
-  dragElement(document.getElementById(btn.id ));
+  dragElement(document.getElementById(`${btn.id}`));
+    console.log(document.getElementById(`${btn.id}`))
 }
