@@ -13,10 +13,8 @@ function at() {
 }
 
 
-let AvocadoToasts = document.querySelectorAll(".AvocadoToast")
-    AvocadoToasts.forEach(AvocadoToast=>{
+let AvocadoToasts = document.getElementById("AvocadoToast")
   dragElement(AvocadoToast)
-})
 // Make the DIV element draggable:
 
 
@@ -57,13 +55,14 @@ function dragElement(elmnt) {
     // set the element's new position:
     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    console.log(elmnt.style.top)
+    console.log(pos1,pos2,pos3,pos4)
     
   }
 
   function closeDragElement() {
     // stop moving when mouse button is released:
-     addRecipe(elmnt)
+    if(elmnt.id===AvocadoToastCount){ addRecipe(elmnt)}
+    
     document.onmouseup = null;
     document.onmousemove = null;
     
