@@ -69,7 +69,7 @@ function dragElement(elmnt) {
 }
 
 function addRecipe(elmnt) {
-  if (AvocadoToastCount !== 9) {
+  if (AvocadoToastCount !== 6) {
     console.log(elmnt);
     var btn = document.createElement("BUTTON");
     btn.innerHTML = `${elmnt.innerHTML}`;
@@ -80,6 +80,6 @@ function addRecipe(elmnt) {
     console.log(btn.id);
     console.log(AvocadoToastCount);
   } else {
-    alert(`In order to obtain a balanced diet, ${elmnt.id.slice(0, btn.id.length - 1)}`);
+    alert(`Note:To maintain a balanced diet, having AvocadoToast more than 7 meals per week is not recommended.`);
   }
 }

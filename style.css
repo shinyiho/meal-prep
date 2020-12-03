@@ -24,7 +24,7 @@ h1 {
   padding:20px;
   display:flex
 }
-.button {
+button {
   background-color: pink;
   border-radius: 25px;
   border: none;
@@ -35,7 +35,7 @@ h1 {
   font-size: 16px;
   transition: transform .2s; /* Animation */
 }
-.button:hover {
+button:hover {
   transform: scale(1.5);
 }
 
