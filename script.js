@@ -18,7 +18,7 @@ function at() {
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  // console.log("sdhf")
+  console.log("sdhf")
   if (document.getElementById(elmnt.id + "header")) {
     // if present, the header is where you move the DIV from:
     document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
@@ -53,7 +53,7 @@ function dragElement(elmnt) {
     // set the element's new position:
     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    console.log(pos1,pos2,pos3,pos4)
+    // console.log(pos1,pos2,pos3,pos4)
     
   }
 
@@ -74,11 +74,13 @@ function dragElement(elmnt) {
 
 
   function addRecipe(elmnt) {
+        console.log(elmnt)
   var btn = document.createElement("BUTTON");
   btn.innerHTML = `${elmnt.innerHTML}`;
-  btn.id = `${elmnt.id.slice(0,btn.id.length-1)}${elmnt.id.slice(-1)}`;
+  btn.id = `${elmnt.id.slice(0,btn.id.length-1)}${AvocadoToastCount++}`;
   btn.className = "button AvocadoToast"
   document.getElementById("recipe").appendChild(btn);
   dragElement(document.getElementById(`${btn.id}`));
-    console.log(elmnt)
+    console.log(btn.id)
+
 }
