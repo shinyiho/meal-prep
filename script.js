@@ -24,7 +24,8 @@ function dragElement(elmnt) {
   var pos1 = 0,
     pos2 = 0,
     pos3 = 0,
-    pos4 = 0;
+    pos4 = 0,
+    included = false;
   if (document.getElementById(elmnt.id + "header")) {
     // if present, the header is where you move the DIV from:
     document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
@@ -40,6 +41,7 @@ function dragElement(elmnt) {
     // get the mouse cursor position at startup:
     pos3 = e.clientX;
     pos4 = e.clientY;
+    included=validRegion()
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
@@ -65,24 +67,22 @@ function dragElement(elmnt) {
     if (elmnt.id === `${elmnt.className}${sumMeal[elmnt.className]}`) {
       addRecipe(elmnt);
     }
-     dishesSumary()
+    if (!included) {
+      validsumMeal[elmnt.className] += 1;
+    }
     document.onmouseup = null;
     document.onmousemove = null;
-   
   }
-  function dishesSumary() {
+  function validRegion() {
     if (
-      parseInt(elmnt.style.left,10) > window.innerWidth / 2 &&
-      parseInt(elmnt.style.top,10) > window.innerHeight / 2
+      parseInt(elmnt.style.left, 10) > window.innerWidth / 2 &&
+      parseInt(elmnt.style.top, 10) > window.innerHeight / 2
     ) {
-      validsumMeal[elmnt.className] += 1;
-    }else{
-      validsumMeal[elmnt.className] -= 1;?????好像需要紀錄原本位置
-    }
-    console.log(validsumMeal)
+      return true;
+    } 
+    return false;
+  }
 }
-}
-
 
 function addRecipe(elmnt) {
   if (sumMeal[elmnt.className] !== 6) {
