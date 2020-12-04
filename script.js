@@ -92,3 +92,7 @@ function addRecipe(elmnt) {
   }
    console.log(sumMeal[elmnt.className]);
 }
+
+
+// console.log(document.querySelector("Table").style.top)
+console.log(window.addEventListener("click",(e)=>{console.log(e)})
