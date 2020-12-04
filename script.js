@@ -3,6 +3,11 @@ let sumMeal = {
   Spaghetti: 0,
   Chilli: 0
 };
+let validsumMeal = {
+  AvocadoToast: 0,
+  Spaghetti: 0,
+  Chilli: 0
+};
 
 // function at() {
 //   document.getElementById("Avocado").innerHTML = `${AvocadoCount++}`;
@@ -60,28 +65,24 @@ function dragElement(elmnt) {
     if (elmnt.id === `${elmnt.className}${sumMeal[elmnt.className]}`) {
       addRecipe(elmnt);
     }
+     dishesSumary()
     document.onmouseup = null;
     document.onmousemove = null;
-    dishesSumary()
+   
   }
-}
-function dishesSumary() {
-  let validAT = 0;
-  // let validChi = 0;
-  // let validSpa = 0;
-  document.querySelectorAll(".AvocadoToast").forEach(AvocadoToast => {
-     // console.log( parseInt(AvocadoToast.style.left, 10)," AvocadoToast.style.left")
-     //  console.log(parseInt(AvocadoToast.style.left, 10)window.innerWidth / 2 ,"window.innerWidth / 2 ")
+  function dishesSumary() {
     if (
-      parseInt(AvocadoToast.style.left,10) > window.innerWidth / 2 &&
-      parseInt(AvocadoToast.style.top,10) > window.innerHeight / 2
+      parseInt(elmnt.style.left,10) > window.innerWidth / 2 &&
+      parseInt(elmnt.style.top,10) > window.innerHeight / 2
     ) {
-     
-      validAT += 1;
+      validsumMeal[elmnt.className] += 1;
+    }else{
+      validsumMeal[elmnt.className] -= 1;?????好像需要紀錄原本位置
     }
-  });
-  console.log(validAT)
+    console.log(validsumMeal)
 }
+}
+
 
 function addRecipe(elmnt) {
   if (sumMeal[elmnt.className] !== 6) {
