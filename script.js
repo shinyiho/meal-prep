@@ -10,9 +10,9 @@ let validsumMeal = {
 };
 
 function at() {
-  document.getElementById("Avocado").innerHTML = `${validsumMeal[AvocadoToast]}`;
-  document.getElementById("Lemon").innerHTML = `${validsumMeal[Spaghetti]}`;
-  document.getElementById("Egg").innerHTML = `${validsumMeal[Chilli]}`;
+  document.getElementById("Avocado").innerHTML = `${validsumMeal.AvocadoToast}`;
+  document.getElementById("Lemon").innerHTML = `${validsumMeal.Spaghetti}`;
+  document.getElementById("Egg").innerHTML = `${validsumMeal.Chilli}`;
 }
 
 document.querySelectorAll("button").forEach(button => {
@@ -78,7 +78,7 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
     console.log(validsumMeal)
-    at()
+    at();
   }
   
   function validRegion() {//is incude or not
@@ -100,7 +100,6 @@ function addRecipe(elmnt) {
     btn.className = `${elmnt.className}`;
     document.getElementById("recipe").appendChild(btn);
     dragElement(document.getElementById(`${btn.id}`));
-    // console.log(AvocadoToastCount);
   } else {
     alert(
       `Note:To maintain a balanced diet, having AvocadoToast more than 7 meals per week is not recommended.`
@@ -108,5 +107,6 @@ function addRecipe(elmnt) {
   }
 }
 
-// console.log(document.querySelector("Table").style.top)
-// console.log(window.addEventListener("click",(e)=>{console.log(e)}))
+
+//resize後會計算錯誤 
+//
