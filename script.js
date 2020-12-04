@@ -8,11 +8,25 @@ let validtag = {
   Spaghetti: 0,
   Chilli: 0
 };
+// let avocado=0;
+// let lemon=0;
+// let egg=0;
+// let bellpepper=0;
+// let beef =0;
+// let bakedbeans=0;
+// let kidneybeans=0;
 
 function at() {
+  
+  
   document.getElementById("Avocado").innerHTML = `${validtag.AvocadoToast}`;
-  document.getElementById("Lemon").innerHTML = `${validtag.Spaghetti}`;
-  document.getElementById("Egg").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("Lemon").innerHTML = `${validtag.AvocadoToast*0.5}`;
+  document.getElementById("Egg").innerHTML = `${validtag.AvocadoToast}`;
+  document.getElementById("BellPepper").innerHTML = `${validtag.AvocadoToast*0.2}`;
+  document.getElementById("Beef").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("BakedBeans").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("KidneyBeans").innerHTML = `${validtag.Chilli}`;
+  
 }
 
 document.querySelectorAll("button").forEach(button => {
