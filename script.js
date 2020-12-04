@@ -1,12 +1,18 @@
 let tag = {
   AvocadoToast: 0,
   Spaghetti: 0,
-  Chilli: 0
+  Chilli: 0,
+  Curry:0,
+  Chicken:0,
+  Bourguignon:0
 };
 let validtag = {
   AvocadoToast: 0,
   Spaghetti: 0,
-  Chilli: 0
+  Chilli: 0,
+  Curry:0,
+  Chicken:0,
+  Bourguignon:0
 };
 // let avocado=0;
 // let lemon=0;
@@ -21,8 +27,6 @@ function trim(n) {
 }
 
 function at() {
-  
-  
   document.getElementById("Avocado").innerHTML = `${validtag.AvocadoToast}`;
   document.getElementById("Lemon").innerHTML = `${validtag.AvocadoToast*0.5}`;
   document.getElementById("Egg").innerHTML = `${validtag.AvocadoToast}`;
@@ -30,6 +34,33 @@ function at() {
   document.getElementById("Beef").innerHTML = `${validtag.Chilli}`;
   document.getElementById("BakedBeans").innerHTML = `${validtag.Chilli}`;
   document.getElementById("KidneyBeans").innerHTML = `${validtag.Chilli}`;
+   document.getElementById("MushRoom").innerHTML = `${validtag.Chilli}`;
+   document.getElementById("Cheese").innerHTML = `${validtag.Chilli}`;
+   document.getElementById("spaghetti").innerHTML = `${validtag.Chilli}`;
+   document.getElementById("Zucchini").innerHTML = `${validtag.Chilli}`;
+   document.getElementById("rice").innerHTML = `${validtag.Chilli}`;
+   document.getElementById("garlic").innerHTML = `${validtag.Chilli}`;
+   document.getElementById("onion").innerHTML = `${validtag.Chilli}`;
+   document.getElementById("whitewine").innerHTML = `${validtag.Chilli}`;
+   document.getElementById("redwine").innerHTML = `${validtag.Chilli}`;
+   document.getElementById("carrot").innerHTML = `${validtag.Chilli}`;
+   document.getElementById("chickbrew").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("tomatopaste").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("potato").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("drumstick").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("salad").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("milk").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("sourcream").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("naan").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("chickbrew").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("chickbrew").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("chickbrew").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("chickbrew").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("chickbrew").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("chickbrew").innerHTML = `${validtag.Chilli}`;
+  document.getElementById("chickbrew").innerHTML = `${validtag.Chilli}`;
+  
+  
   
 }
 

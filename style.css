@@ -1,28 +1,24 @@
 /* CSS files add styling rules to your content */
-@import url('https://fonts.googleapis.com/css?family=Notable&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Notable&display=swap");
 
 body {
   font-family: helvetica, arial, sans-serif;
   margin: 2em;
-  background:#fff9ed
+  background: #fff9ed;
 }
 
 h1 {
-  font: 40px/1 'Notable', sans-serif;
+  font: 40px/1 "Notable", sans-serif;
   margin: 1rem;
   font-style: italic;
   color: #fad4ed;
   text-align: center;
-  text-shadow:
-     3px  3px 0 #000,
-    -1px -1px 0 #000,  
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
 }
-.layout{
-  padding:20px;
-  display:flex
+.layout {
+  padding: 20px;
+  display: flex;
 }
 button {
   background-color: pink;
@@ -33,7 +29,7 @@ button {
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  transition: transform .2s; /* Animation */
+  transition: transform 0.2s; /* Animation */
   position: absolute;
 }
 button:hover {
@@ -42,57 +38,61 @@ button:hover {
 
 #recipe {
   display: flex;
-  justify-content:space-around;
-
+  justify-content: space-around;
 }
 
-.AvocadoToast{
-    left:30vw;
+.AvocadoToast {
+  left: 10vw;
 }
-.Chilli{
-      left:50vw;
-  
+.Chilli {
+  left: 20vw;
 }
-.Spaghetti{
-     left:70vw;
+.Bourguignon {
+  left: 25vw;
 }
-  
+.Spaghetti {
+  left: 35vw;
+}
+.Curry {
+  left: 42vw;
+}
 
+.Chicken {
+  left: 52vw;
+}
 
-.Ingredient{
-  flex:50%;
+.Ingredient {
+  flex: 50%;
 }
 table {
-  flex:50%;
-  background-color:#fff3f2;
-  color:#e35246;
+  flex: 50%;
+  background-color: #fff3f2;
+  color: #e35246;
   border-collapse: collapse;
   width: 100%;
-  border-radius:20px;
-  margin:20px;
-  overflow:hidden;
-
-  
+  border-radius: 20px;
+  margin: 20px;
+  overflow: hidden;
 }
 
-
-td, th {
-/*   border: none; */
+td,
+th {
+  /*   border: none; */
   text-align: center;
   padding: 18px;
 }
-td{
-  padding:30px
+td {
+  padding: 30px;
 }
 
 tr:nth-child(even) {
   background-color: #ffffff;
 }
 
-.Ingredient{
-  height:80vh;
-    margin:20px;
-    display:flex;
-  flex-direction:column;
+.Ingredient {
+  height: 80vh;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
