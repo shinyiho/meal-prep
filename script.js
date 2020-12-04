@@ -16,13 +16,17 @@ let validtag = {
 // let bakedbeans=0;
 // let kidneybeans=0;
 
+function trim(n) {
+  return Math.round(10 * n) / 10
+}
+
 function at() {
   
   
   document.getElementById("Avocado").innerHTML = `${validtag.AvocadoToast}`;
   document.getElementById("Lemon").innerHTML = `${validtag.AvocadoToast*0.5}`;
   document.getElementById("Egg").innerHTML = `${validtag.AvocadoToast}`;
-  document.getElementById("BellPepper").innerHTML = `${validtag.AvocadoToast*0.2}`;
+  document.getElementById("BellPepper").innerHTML = `${trim(validtag.AvocadoToast*0.2)}`;
   document.getElementById("Beef").innerHTML = `${validtag.Chilli}`;
   document.getElementById("BakedBeans").innerHTML = `${validtag.Chilli}`;
   document.getElementById("KidneyBeans").innerHTML = `${validtag.Chilli}`;
