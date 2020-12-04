@@ -13,9 +13,8 @@ let sumMeal = {
 
 document.querySelectorAll("button").forEach(button => {
   dragElement(document.getElementById(`${button.id}`));
-
 });
- 
+
 function dragElement(elmnt) {
   var pos1 = 0,
     pos2 = 0,
@@ -61,18 +60,27 @@ function dragElement(elmnt) {
     if (elmnt.id === `${elmnt.className}${sumMeal[elmnt.className]}`) {
       addRecipe(elmnt);
     }
-     document.onmouseup = null;
+    document.onmouseup = null;
     document.onmousemove = null;
-    // console.log(`AvocadoToast${AvocadoToastCount}`)
-    document.querySelectorAll(".AvocadoToast").forEach(AvocadoToast=>{
-  // if(AvocadoToast.left)
-  console.log(AvocadoToast.style.left)
-   console.log(window.innerHeight)
-   
-   
-})
-
+    dishesSumary()
   }
+}
+function dishesSumary() {
+  let validAT = 0;
+  // let validChi = 0;
+  // let validSpa = 0;
+  document.querySelectorAll(".AvocadoToast").forEach(AvocadoToast => {
+     // console.log( parseInt(AvocadoToast.style.left, 10)," AvocadoToast.style.left")
+     //  console.log(parseInt(AvocadoToast.style.left, 10)window.innerWidth / 2 ,"window.innerWidth / 2 ")
+    if (
+      parseInt(AvocadoToast.style.left,10) > window.innerWidth / 2 &&
+      parseInt(AvocadoToast.style.top,10) > window.innerHeight / 2
+    ) {
+     
+      validAT += 1;
+    }
+  });
+  console.log(validAT)
 }
 
 function addRecipe(elmnt) {
@@ -91,11 +99,5 @@ function addRecipe(elmnt) {
   }
 }
 
-
 // console.log(document.querySelector("Table").style.top)
 // console.log(window.addEventListener("click",(e)=>{console.log(e)}))
-
-let totalAT = 0
-
-
-
