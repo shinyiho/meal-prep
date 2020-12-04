@@ -13,15 +13,14 @@ let sumMeal = {
 
 document.querySelectorAll("button").forEach(button => {
   dragElement(document.getElementById(`${button.id}`));
-  console.log(button.id);
-});
 
+});
+ 
 function dragElement(elmnt) {
   var pos1 = 0,
     pos2 = 0,
     pos3 = 0,
     pos4 = 0;
-  console.log("sdhf");
   if (document.getElementById(elmnt.id + "header")) {
     // if present, the header is where you move the DIV from:
     document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
@@ -32,8 +31,6 @@ function dragElement(elmnt) {
   }
 
   function dragMouseDown(e) {
-    console.log("getmousedown")
-    console.log(e);
     e = e || window.event;
     e.preventDefault();
     // get the mouse cursor position at startup:
@@ -45,7 +42,6 @@ function dragElement(elmnt) {
   }
 
   function elementDrag(e) {
-        console.log("getdraging")
     e = e || window.event;
     e.preventDefault();
     // calculate the new cursor position:
@@ -61,21 +57,25 @@ function dragElement(elmnt) {
   }
 
   function closeDragElement() {
-    
-    console.log(sumMeal[elmnt.className])
     // stop moving when mouse button is released:
     if (elmnt.id === `${elmnt.className}${sumMeal[elmnt.className]}`) {
       addRecipe(elmnt);
     }
-    // console.log(`AvocadoToast${AvocadoToastCount}`)
-
-    document.onmouseup = null;
+     document.onmouseup = null;
     document.onmousemove = null;
+    // console.log(`AvocadoToast${AvocadoToastCount}`)
+    document.querySelectorAll(".AvocadoToast").forEach(AvocadoToast=>{
+  // if(AvocadoToast.left)
+  console.log(AvocadoToast.style.left)
+   console.log(window.innerHeight)
+   
+   
+})
+
   }
 }
 
 function addRecipe(elmnt) {
-    console.log(elmnt);
   if (sumMeal[elmnt.className] !== 6) {
     var btn = document.createElement("BUTTON");
     btn.innerHTML = `${elmnt.innerHTML}`;
@@ -83,16 +83,19 @@ function addRecipe(elmnt) {
     btn.className = `${elmnt.className}`;
     document.getElementById("recipe").appendChild(btn);
     dragElement(document.getElementById(`${btn.id}`));
-    console.log(btn);
     // console.log(AvocadoToastCount);
   } else {
     alert(
       `Note:To maintain a balanced diet, having AvocadoToast more than 7 meals per week is not recommended.`
     );
   }
-   console.log(sumMeal[elmnt.className]);
 }
 
 
 // console.log(document.querySelector("Table").style.top)
-console.log(window.addEventListener("click",(e)=>{console.log(e)})
+// console.log(window.addEventListener("click",(e)=>{console.log(e)}))
+
+let totalAT = 0
+
+
+
