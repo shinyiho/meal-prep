@@ -9,12 +9,11 @@ let validsumMeal = {
   Chilli: 0
 };
 
-// function at() {
-//   document.getElementById("Avocado").innerHTML = `${AvocadoCount++}`;
-//   document.getElementById("Lemon").innerHTML = `${LemonCount++}`;
-//   document.getElementById("Egg").innerHTML = `${EggCount++}`;
-//   document.getElementById("Bell pepper").innerHTML = `${BellPepperCount++}`;
-// }
+function at() {
+  document.getElementById("Avocado").innerHTML = `${validsumMeal[AvocadoToast]}`;
+  document.getElementById("Lemon").innerHTML = `${validsumMeal[Spaghetti]}`;
+  document.getElementById("Egg").innerHTML = `${validsumMeal[Chilli]}`;
+}
 
 document.querySelectorAll("button").forEach(button => {
   dragElement(document.getElementById(`${button.id}`));
@@ -25,7 +24,7 @@ function dragElement(elmnt) {
     pos2 = 0,
     pos3 = 0,
     pos4 = 0,
-    included = false;
+    included;//record initial position included or not
   if (document.getElementById(elmnt.id + "header")) {
     // if present, the header is where you move the DIV from:
     document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
@@ -67,16 +66,25 @@ function dragElement(elmnt) {
     if (elmnt.id === `${elmnt.className}${sumMeal[elmnt.className]}`) {
       addRecipe(elmnt);
     }
-    if (!included) {
+    //does the event add more valid dish=>was not included but now included
+    console.log(included)
+    if (!included&&validRegion()) {
       validsumMeal[elmnt.className] += 1;
+    }
+    //does the event minus valid dish=>was included but now not included
+    if (included&&!validRegion()){
+      validsumMeal[elmnt.className] -= 1;
     }
     document.onmouseup = null;
     document.onmousemove = null;
+    console.log(validsumMeal)
+    at()
   }
-  function validRegion() {
+  
+  function validRegion() {//is incude or not
     if (
-      parseInt(elmnt.style.left, 10) > window.innerWidth / 2 &&
-      parseInt(elmnt.style.top, 10) > window.innerHeight / 2
+      parseInt(elmnt.style.left, 10) > window.innerWidth *0.52 &&
+      parseInt(elmnt.style.top, 10) > window.innerHeight *0.2
     ) {
       return true;
     } 
