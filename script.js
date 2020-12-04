@@ -1,18 +1,18 @@
-let sumMeal = {
+let tag = {
   AvocadoToast: 0,
   Spaghetti: 0,
   Chilli: 0
 };
-let validsumMeal = {
+let validtag = {
   AvocadoToast: 0,
   Spaghetti: 0,
   Chilli: 0
 };
 
 function at() {
-  document.getElementById("Avocado").innerHTML = `${validsumMeal.AvocadoToast}`;
-  document.getElementById("Lemon").innerHTML = `${validsumMeal.Spaghetti}`;
-  document.getElementById("Egg").innerHTML = `${validsumMeal.Chilli}`;
+  document.getElementById("Avocado").innerHTML = `${validtag.AvocadoToast}`;
+  document.getElementById("Lemon").innerHTML = `${validtag.Spaghetti}`;
+  document.getElementById("Egg").innerHTML = `${validtag.Chilli}`;
 }
 
 document.querySelectorAll("button").forEach(button => {
@@ -63,21 +63,20 @@ function dragElement(elmnt) {
 
   function closeDragElement() {
     // stop moving when mouse button is released:
-    if (elmnt.id === `${elmnt.className}${sumMeal[elmnt.className]}`) {
+    if (elmnt.id === `${elmnt.className}${tag[elmnt.className]}`) {
       addRecipe(elmnt);
     }
     //does the event add more valid dish=>was not included but now included
-    console.log(included)
     if (!included&&validRegion()) {
-      validsumMeal[elmnt.className] += 1;
+      validtag[elmnt.className] += 1;
     }
     //does the event minus valid dish=>was included but now not included
     if (included&&!validRegion()){
-      validsumMeal[elmnt.className] -= 1;
+      validtag[elmnt.className] -= 1;
     }
     document.onmouseup = null;
     document.onmousemove = null;
-    console.log(validsumMeal)
+    console.log(validtag)
     at();
   }
   
@@ -93,16 +92,16 @@ function dragElement(elmnt) {
 }
 
 function addRecipe(elmnt) {
-  if (sumMeal[elmnt.className] !== 6) {
+  if (tag[elmnt.className] !== 6) {
     var btn = document.createElement("BUTTON");
     btn.innerHTML = `${elmnt.innerHTML}`;
-    btn.id = `${elmnt.className}${++sumMeal[elmnt.className]}`;
+    btn.id = `${elmnt.className}${++tag[elmnt.className]}`;
     btn.className = `${elmnt.className}`;
     document.getElementById("recipe").appendChild(btn);
     dragElement(document.getElementById(`${btn.id}`));
   } else {
     alert(
-      `Note:To maintain a balanced diet, having AvocadoToast more than 7 meals per week is not recommended.`
+      `Note:To maintain a balanced diet, having ${elmnt.className} more than 7 meals per week is not recommended.`
     );
   }
 }
