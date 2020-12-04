@@ -60,10 +60,6 @@ button:hover {
 .Chicken {
   left: 52vw;
 }
-
-.Ingredient {
-  flex: 50%;
-}
 table {
   flex: 50%;
   background-color: #fff3f2;
@@ -90,6 +86,7 @@ tr:nth-child(even) {
 }
 
 .Ingredient {
+  flex: 50%;
   height: 80vh;
   margin: 20px;
   display: flex;
