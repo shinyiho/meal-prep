@@ -88,3 +88,11 @@ td{
 tr:nth-child(even) {
   background-color: #ffffff;
 }
+
+.Ingredient{
+  height:80vh;
+    margin:20px;
+    display:flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+}
