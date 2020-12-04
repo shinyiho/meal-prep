@@ -4,7 +4,7 @@ let tag = {
   Chilli: 0,
   Curry: 0,
   Chicken: 0,
-  Bourguignon: 0
+  Bourguignon: 0,
 };
 let validtag = {
   AvocadoToast: 0,
@@ -12,7 +12,7 @@ let validtag = {
   Chilli: 0,
   Curry: 0,
   Chicken: 0,
-  Bourguignon: 0
+  Bourguignon: 0,
 };
 function trim(n) {
   return Math.round(10 * n) / 10;
@@ -22,64 +22,36 @@ function at() {
   document.getElementById("Avocado").innerHTML = `${validtag.AvocadoToast}`;
   document.getElementById("Lemon").innerHTML = `${validtag.AvocadoToast * 0.5}`;
   document.getElementById("Egg").innerHTML = `${validtag.AvocadoToast * 3}`;
-  document.getElementById("BellPepper").innerHTML = `${trim(
-    validtag.AvocadoToast * 0.2
-  )}`;
-  document.getElementById("Beef").innerHTML = `${validtag.Chilli +
-    validtag.Bourguignon}`;
+  document.getElementById("BellPepper").innerHTML = `${trim(validtag.AvocadoToast * 0.2)}`;
+  document.getElementById("Beef").innerHTML = `${validtag.Chilli + validtag.Bourguignon}`;
   document.getElementById("BakedBeans").innerHTML = `${validtag.Chilli}`;
   document.getElementById("KidneyBeans").innerHTML = `${validtag.Chilli}`;
-  document.getElementById("MushRoom").innerHTML = `${validtag.Bourguignon +
-    validtag.Spaghetti * 0.5}`;
-  document.getElementById("spaghetti").innerHTML = `${trim(
-    validtag.Spaghetti * 0.15
-  )}`;
+  document.getElementById("MushRoom").innerHTML = `${validtag.Bourguignon + validtag.Spaghetti * 0.5}`;
+  document.getElementById("spaghetti").innerHTML = `${trim(validtag.Spaghetti * 0.15)}`;
   document.getElementById("Zucchini").innerHTML = `${validtag.Spaghetti * 0.5}`;
-  document.getElementById("rice").innerHTML = `${validtag.Bourguignon * 0.5 +
-    validtag.Curry * 0.5}`;
-  document.getElementById("garlic").innerHTML = `${validtag.Bourguignon *
-    0.25}`;
-  document.getElementById("onion").innerHTML = `${validtag.Bourguignon +
-    validtag.Curry * 2 +
-    validtag.Spaghetti * 0.5}`;
-  document.getElementById("whitewine").innerHTML = `${trim(
-    validtag.Spaghetti * 0.2
-  )}`;
-  document.getElementById("redwine").innerHTML = `${trim(
-    validtag.Bourguignon * 0.3
-  )}`;
-  document.getElementById("carrot").innerHTML = `${validtag.Bourguignon * 0.5 +
-    validtag.Curry * 0.5}`;
-  document.getElementById("chickbrew").innerHTML = `${validtag.Bourguignon *
-    0.25}`;
-  document.getElementById("tomatopaste").innerHTML = `${validtag.Bourguignon *
-    0.25}`;
-  document.getElementById("potato").innerHTML = `${validtag.Curry * 2 +
-    validtag.Chicken}`;
-  document.getElementById("drumstick").innerHTML = `${validtag.Curry +
-    validtag.Chicken * 0.5}`;
+  document.getElementById("rice").innerHTML = `${validtag.Bourguignon * 0.5 + validtag.Curry * 0.5}`;
+  document.getElementById("garlic").innerHTML = `${validtag.Bourguignon * 0.25}`;
+  document.getElementById("onion").innerHTML = `${
+    validtag.Bourguignon + validtag.Curry * 2 + validtag.Spaghetti * 0.5
+  }`;
+  document.getElementById("whitewine").innerHTML = `${trim(validtag.Spaghetti * 0.2)}`;
+  document.getElementById("redwine").innerHTML = `${trim(validtag.Bourguignon * 0.3)}`;
+  document.getElementById("carrot").innerHTML = `${validtag.Bourguignon * 0.5 + validtag.Curry * 0.5}`;
+  document.getElementById("chickbrew").innerHTML = `${validtag.Bourguignon * 0.25}`;
+  document.getElementById("tomatopaste").innerHTML = `${validtag.Bourguignon * 0.25}`;
+  document.getElementById("potato").innerHTML = `${validtag.Curry * 2 + validtag.Chicken}`;
+  document.getElementById("drumstick").innerHTML = `${validtag.Curry + validtag.Chicken * 0.5}`;
   document.getElementById("salad").innerHTML = `${validtag.Chicken}`;
-  document.getElementById("milk").innerHTML = `${trim(
-    validtag.Spaghetti * 0.1
-  )}`;
+  document.getElementById("milk").innerHTML = `${trim(validtag.Spaghetti * 0.1)}`;
   document.getElementById("sourcream").innerHTML = `${validtag.Chilli}`;
   document.getElementById("naan").innerHTML = `${validtag.Chilli}`;
   document.getElementById("toast").innerHTML = `${validtag.AvocadoToast * 3}`;
   document.getElementById("Cheese").innerHTML = `${trim(
-    validtag.Chilli * 0.1 +
-      validtag.AvocadoToast * 0.1 +
-      validtag.Spaghetti * 0.1
+    validtag.Chilli * 0.1 + validtag.AvocadoToast * 0.1 + validtag.Spaghetti * 0.1
   )}`;
-
-  //   document.getElementById("chickbrew").innerHTML = `${validtag.Chilli}`;
-  //   document.getElementById("chickbrew").innerHTML = `${validtag.Chilli}`;
-  //   document.getElementById("chickbrew").innerHTML = `${validtag.Chilli}`;
-  //   document.getElementById("chickbrew").innerHTML = `${validtag.Chilli}`;
-  //   document.getElementById("chickbrew").innerHTML = `${validtag.Chilli}`;
-  //   document.getElementById("chickbrew").innerHTML = `${validtag.Chilli}`;
 }
 
-document.querySelectorAll("button").forEach(button => {
+document.querySelectorAll("button").forEach((button) => {
   dragElement(document.getElementById(`${button.id}`));
 });
 
@@ -164,8 +136,6 @@ function addRecipe(elmnt) {
     document.getElementById("recipe").appendChild(btn);
     dragElement(document.getElementById(`${btn.id}`));
   } else {
-    alert(
-      `Note:To maintain a balanced diet, having ${elmnt.className} more than 7 meals per week is not recommended.`
-    );
+    alert(`Note:To maintain a balanced diet, having ${elmnt.className} more than 7 meals per week is not recommended.`);
   }
 }
